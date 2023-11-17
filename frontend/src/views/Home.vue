@@ -1,24 +1,47 @@
 <template>
-  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quaerat laborum amet debitis deserunt pariatur voluptatibus! Optio modi vel pariatur quia, fugiat quis, provident quod voluptates dolorum, eos accusamus odio.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quaerat laborum amet debitis deserunt pariatur voluptatibus! Optio modi vel pariatur quia, fugiat quis, provident quod voluptates dolorum, eos accusamus odio.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quaerat laborum amet debitis deserunt pariatur voluptatibus! Optio modi vel pariatur quia, fugiat quis, provident quod voluptates dolorum, eos accusamus odio.
+  <v-container>
+      <v-row no-gutters justify="center">
+          <v-col cols="12" sm="3" md="3">
+              <v-card
+              class="ma-2 pa-2 text-center"
+              max-width="auto"
+              height="400"
+              image="https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg"
+              title="About me"
+              theme="light"
+              link
+              ></v-card>
+          </v-col>
+          <v-col cols="12" sm="3" md="3">
+              <v-card
+              class="ma-2 pa-2 text-center title-bottom"
+              max-width="auto"
+              height="400"
+              image="https://images.pexels.com/photos/2911540/pexels-photo-2911540.jpeg"
+              title="About me"
+              theme="dark"
+              link
+              href=""
+              ></v-card>
+          </v-col>
+          <v-col cols="12" sm="3" md="3" >
+              <v-card
+              class="ma-2 pa-2 align-end"
+              max-width="auto"
+              height="400"
+              image="https://images.pexels.com/photos/4210783/pexels-photo-4210783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              title="About me"
+              theme="light"
+              link
+              >
+          </v-card>
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum fringilla quam, eget efficitur tortor malesuada ut. Duis sodales arcu vel elit hendrerit tristique. Sed bibendum justo vitae dui varius, ac fermentum elit tempor. Proin aliquet urna eu tincidunt hendrerit. Vestibulum efficitur ullamcorper neque, in facilisis justo sodales vel. Sed non justo eu urna dictum ullamcorper nec eu libero. Vestibulum tristique aliquam velit id imperdiet. Fusce sit amet malesuada justo. Proin tristique fermentum ultrices. Nullam vehicula justo a nisi dapibus accumsan. Sed sed libero ac nisi feugiat vestibulum.
-
-Pellentesque in malesuada purus, ac vestibulum elit. In hac habitasse platea dictumst. Quisque a dolor eu metus posuere auctor. Integer eu orci ut libero ullamcorper bibendum. Nullam bibendum nisl eu sem bibendum, vel aliquam mi varius. Proin vel tincidunt velit. Sed venenatis auctor odio, ac scelerisque leo sollicitudin vel. Sed feugiat, quam id fermentum bibendum, ipsum dolor vulputate ex, nec feugiat lacus arcu vitae nunc. Sed nec urna ultricies, varius sapien a, pharetra odio. Vestibulum sodales, libero eu ultrices aliquam, velit mi tincidunt libero, in interdum ligula mauris nec libero. Maecenas dapibus eu sem a auctor. Sed sed metus non lacus congue laoreet. Vivamus nec scelerisque nisi. Sed vestibulum mauris a quam bibendum, vitae finibus mauris pellentesque. Suspendisse potenti.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum fringilla quam, eget efficitur tortor malesuada ut. Duis sodales arcu vel elit hendrerit tristique. Sed bibendum justo vitae dui varius, ac fermentum elit tempor. Proin aliquet urna eu tincidunt hendrerit. Vestibulum efficitur ullamcorper neque, in facilisis justo sodales vel. Sed non justo eu urna dictum ullamcorper nec eu libero. Vestibulum tristique aliquam velit id imperdiet. Fusce sit amet malesuada justo. Proin tristique fermentum ultrices. Nullam vehicula justo a nisi dapibus accumsan. Sed sed libero ac nisi feugiat vestibulum.
-
-Pellentesque in malesuada purus, ac vestibulum elit. In hac habitasse platea dictumst. Quisque a dolor eu metus posuere auctor. Integer eu orci ut libero ullamcorper bibendum. Nullam bibendum nisl eu sem bibendum, vel aliquam mi varius. Proin vel tincidunt velit. Sed venenatis auctor odio, ac scelerisque leo sollicitudin vel. Sed feugiat, quam id fermentum bibendum, ipsum dolor vulputate ex, nec feugiat lacus arcu vitae nunc. Sed nec urna ultricies, varius sapien a, pharetra odio. Vestibulum sodales, libero eu ultrices aliquam, velit mi tincidunt libero, in interdum ligula mauris nec libero. Maecenas dapibus eu sem a auctor. Sed sed metus non lacus congue laoreet. Vivamus nec scelerisque nisi. Sed vestibulum mauris a quam bibendum, vitae finibus mauris pellentesque. Suspendisse potenti.
-  </h1>
-
-  
-  
+              
+          </v-col>
+      </v-row>
+  </v-container>
 </template>
 
 <script setup>
-  //import HelloWorld from '@/components/HelloWorld.vue'
+
 </script>
-
-<style>
-
-</style>

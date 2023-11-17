@@ -1,46 +1,47 @@
 <template>
-    <v-container>
-        <v-row no-gutters justify="center">
-            <v-col cols="12" sm="3" md="3">
-                <v-card
-                class="ma-2 pa-2 text-center"
-                max-width="auto"
-                height="400"
-                image="https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg"
-                title="About me"
-                theme="light"
-                link
-                ></v-card>
-            </v-col>
-            <v-col cols="12" sm="3" md="3">
-                <v-card
-                class="ma-2 pa-2 text-center title-bottom"
-                max-width="auto"
-                height="400"
-                image="https://images.pexels.com/photos/2911540/pexels-photo-2911540.jpeg"
-                title="About me"
-                theme="dark"
-                link
-                ></v-card>
-            </v-col>
-            <v-col cols="12" sm="3" md="3" >
-                <v-card
-                class="ma-2 pa-2 align-end"
-                max-width="auto"
-                height="400"
-                image="https://images.pexels.com/photos/4210783/pexels-photo-4210783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                title="About me"
-                theme="light"
-                link
-                >
-            </v-card>
+  <v-dialog >
+    <template v-slot:activator="{ props }">
+      <a style="cursor: pointer;" v-bind="props">
+        <img class="image" :height="400" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
+      </a>
+    </template>
+  
+    <template v-slot:default="{ isActive }">
+      <v-card>
+        <v-carousel>
+          <v-carousel-item
+            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+            cover
+          ></v-carousel-item>
+        
+          <v-carousel-item
+            src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg"
+            cover
+          ></v-carousel-item>
+        
+          <v-carousel-item
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            cover
+          ></v-carousel-item>
+        </v-carousel>
 
-                
-            </v-col>
-        </v-row>
-    </v-container>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+  
+          <v-btn
+            text="Close Dialog"
+            @click="isActive.value = false"
+          ></v-btn>
+        </v-card-actions>
+      </v-card>
+    </template>
+  </v-dialog>
 </template>
 
-<script setup>
+<script>
 
 </script>
+
+<style>
+
+</style>
