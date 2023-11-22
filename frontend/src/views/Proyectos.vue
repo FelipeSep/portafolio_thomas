@@ -1,13 +1,17 @@
 <template>
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-    <!--<img class="image" v-for="image in itemsProyectos"  :src="image.url" draggable="false" />-->
-    <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
-    <img class="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-    <img class="image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-    <img class="image" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-    <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
-    <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
-    <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+    <img  class="image" v-for="(image, i)  in items"  :key="i" :src="image.src"  @click="(dialog = true) && (activeIndex=i)" draggable="false" />
+
+    <v-dialog v-model="dialog" width="100%">
+      <div class="btn"> <v-btn icon="mdi-close" @click="dialog = false"></v-btn></div>
+      <v-carousel v-model="activeIndex" hide-delimiters :show-arrows="false" height="100vh">
+        <v-carousel-item v-for="(item, i) in items" :key="i">
+          <v-img :src="item.src" height="100%" contain>
+          </v-img>
+        </v-carousel-item>
+      </v-carousel>
+    </v-dialog>
+    
   </div>
   </template>
   
@@ -16,8 +20,37 @@
   export default {
   
       data: () => ({
+        dialog: false,
+        items: [
+        {
+          src: 'https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+        }
+      ],
+        itemsProyectos:[
 
-        itemsProyectos:[],
+    
+
+
+
+        ],
       }),
       mounted(){
           //mouse shit
@@ -92,5 +125,13 @@
       transform: translate(-15%, -50%); 
       user-select: none; /* -- Prevent image highlighting -- */
       }
-  
+      
+      .btn {
+        position: absolute;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        z-index: 2;
+        right: 1em;
+        }
   </style>
