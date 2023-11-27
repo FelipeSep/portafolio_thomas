@@ -10,3 +10,8 @@
 ::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(transparent, rgb(1, 58, 182));
 }
+
+/* Agrega tus estilos globales aquí */
+body {
+    font-family: 'Courier Prime', monospace;
+}

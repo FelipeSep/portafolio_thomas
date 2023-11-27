@@ -10,6 +10,7 @@
               title="About me"
               theme="light"
               link
+              href="/about"
               ></v-card>
           </v-col>
           <v-col cols="12" sm="3" md="3">
@@ -35,8 +36,6 @@
               link
               >
           </v-card>
-
-              
           </v-col>
       </v-row>
   </v-container>
