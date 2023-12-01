@@ -1,4 +1,5 @@
 <template>
+  <div class="flex flex-column">
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
     <img  class="image" v-for="(image, i)  in items"  :key="i" :src="image.src"  @click="(dialog = true) && (activeIndex=i)" draggable="false" />
 
@@ -13,6 +14,8 @@
     </v-dialog>
     
   </div>
+  </div>
+  
   </template>
   
   <script>
